@@ -9,9 +9,12 @@ Viewport 3: Bule visto de lado
 
 Viewport 4: Bule rotacionando
 
-### Executando:
+### Compilando:
 
 > gcc bonus2.c -o executavel -lGL -lglut -lGLU 
 
+### Executando:
+
+> ./executavel
 
 ![Exemplo de execução](example.png)
