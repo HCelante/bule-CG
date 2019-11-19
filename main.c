@@ -14,13 +14,19 @@
 //   |***********************************************|
 
 
-
+// Variavel global de rotacao
 static GLfloat spin = 0.0;
 
+
+// Metodo de inicializacao
 int init(void);
+// Metodo de display
 void display(void);
+// Metodo criador das viewports
 void init_Viewports(int xvmin, int yvmin, int vn);
+// Inicializacao da camera
 void init_Camera(float x0, float y0, float z0, float vx, float vy, float vz, int vn);
+// Metodo que rotaciona o objeto
 void spin_Objeto(void);
 
 
@@ -28,7 +34,6 @@ int init(void){
 
     glClearColor(1.0, 1.0, 1.0, 0.0);
     glEnable(GL_DEPTH_TEST);
-
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
     gluOrtho2D(-1.5, 1.72, -1.5, 1.5);
@@ -70,7 +75,6 @@ void init_Camera(float x0, float y0, float z0, float vx, float vy, float vz, int
 
         glRotatef(spin, 0.0, 0.0, 1.0);
         glRotatef(angle, 1.0, 0.0, 0.0);
-
         sizeTeaPoat = 0.6;
     }
 
@@ -116,14 +120,12 @@ int main(int argc, char** argv) {
 
     glutInit(&argc,argv);
     glutInitDisplayMode(GLUT_SINGLE| GLUT_RGB);
-    glutInitWindowSize(800, 800); // window size
-    glutInitWindowPosition(200, 200);
-    glutCreateWindow("Atividade bonus 2");
-
-    glutIdleFunc(spin_Objeto);
-    glutDisplayFunc(display);
-
-    init();
-    glutMainLoop();
+    glutInitWindowSize(800, 800);           // tamanho da janela
+    glutInitWindowPosition(200, 200);       // posicao da janela 
+    glutCreateWindow("Atividade bonus 2");  // criacao da janela
+    glutIdleFunc(spin_Objeto);              // rotacao do objeto
+    glutDisplayFunc(display);               // metodo display
+    init();                                 // meotodo de inicializacao
+    glutMainLoop();                         // metodo de loop da main da lib glut
     return 0;
 }
