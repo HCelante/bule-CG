@@ -1,13 +1,14 @@
 # bule-CG
-Um bule centrado na origem em todas as viewports.
 
-Viewport 1: Bule visto de cima
+### Dependências:
 
-Viewport 2: Bule visto de frente
+> freeglut
 
-Viewport 3: Bule visto de lado
+> freeglut-devel
 
-Viewport 4: Bule rotacionando
+> make
+
+> gcc
 
 ### Compilando:
 
@@ -18,3 +19,14 @@ Viewport 4: Bule rotacionando
 > ./executavel
 
 ![Exemplo de execução](example.png)
+
+
+Um bule centrado na origem em todas as viewports.
+
+Viewport 1: Bule visto de cima
+
+Viewport 2: Bule visto de frente
+
+Viewport 3: Bule visto de lado
+
+Viewport 4: Bule rotacionando
